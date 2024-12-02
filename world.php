@@ -1,4 +1,8 @@
 <?php
+//////////////////////////////////////////
+//PREVENTING SQL INJECTION HACKs by ensure that input doesn't contain any malicious characters
+/////////////////////////////////////////////
+
 $host = 'localhost';
 $username = 'lab5_user';
 $password = 'password123';
@@ -7,9 +11,22 @@ $dbname = 'world';
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
 // Check if a country is passed via the GET request
-if (isset($_GET['country'])) {
-    $countryName = $_GET['country'];
 
+//PREVENTING HACKS BELOW
+
+if (isset($_GET['country'])) {
+    $countryName = trim($_GET['country']);
+
+
+    // Validate that the country name only contains letters and spaces (you can add more rules as needed)
+    if (!preg_match("/^[a-zA-Z\s]+$/", $countryName)) {
+        die("Invalid country name."); // Exit and show error if the input is not valid
+    }
+
+    // Sanitize input to remove any unwanted characters
+    $countryName = filter_var($countryName, FILTER_SANITIZE_STRING); // Remove special chars
+
+    
     // If 'lookup' is set to 'cities', fetch cities data
     if (isset($_GET['lookup']) && $_GET['lookup'] === 'cities') {
         // SQL to get cities in the given country
