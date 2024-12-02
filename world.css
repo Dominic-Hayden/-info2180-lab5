@@ -1,8 +1,7 @@
 /* Add your own styles */
 
-/*Author: Dominic Hayden*/
-/*GIT: https://github.com/Dominic-Hayden/-info2180-lab5.git /*
-
+/* Author: Dominic Hayden */
+/* GIT: https://github.com/Dominic-Hayden/-info2180-lab5.git */
 
 /* General reset */
 * {
@@ -14,10 +13,10 @@
 /* Body styling */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #1b1b1b; 
-    color: #fff; 
+    background-color: #1b1b1b;
+    color: #fff;
     line-height: 1.6;
-    position: relative; 
+    position: relative;
     height: 100vh;
     overflow: hidden;
 }
@@ -30,7 +29,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/background.gif'); 
+    background-image: url('img/background.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +57,7 @@ body::before {
 
 /* Apply shake effect to alert */
 .alert-shake {
-    animation: shake 0.5s ease-in-out 1; 
+    animation: shake 0.5s ease-in-out 1;
 }
 
 /* Apply body shake for screen vibration effect */
@@ -70,8 +69,8 @@ body::before {
 
 /* Header styling */
 header {
-    background-color: #000; 
-    color: #00ff00; 
+    background-color: #000;
+    color: #00ff00;
     padding: 30px 0; /* Increase padding for a larger header */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
@@ -81,40 +80,40 @@ header {
 
 #logo {
     position: absolute;
-    top: 20px; 
-    left: 17%; 
-    width: 180px; 
+    top: 20px;
+    left: 17%;
+    width: 180px;
     height: auto;
     transform: translateX(-10%); /* Fine-tune position to align with the 'W' */
 }
 
 header h1 {
-    font-size: 48px; 
-    letter-spacing: 3px; 
-    margin-left: 180px; 
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin-left: 180px;
     text-shadow: 0 0 15px #00ff00; /* Glowing effect */
 }
 
 /* Controls section */
 #controls {
     text-align: center;
-    margin: 30px 0; 
+    margin: 30px 0;
 }
 
 #controls label {
-    font-size: 22px; 
-    margin-right: 15px; 
-    color: #ddd; 
+    font-size: 22px;
+    margin-right: 15px;
+    color: #ddd;
 }
 
 #controls input {
     padding: 15px 20px;
-    margin: 15px 10px; 
-    border: 2px solid #00ff00; 
+    margin: 15px 10px;
+    border: 2px solid #00ff00;
     border-radius: 5px;
     width: 300px; /* Wider input box */
     transition: border-color 0.3s ease;
-    background-color: #333; 
+    background-color: #333;
     color: #fff;
     font-size: 18px;
 }
@@ -125,11 +124,11 @@ header h1 {
 }
 
 #controls button {
-    background-color: #00ff00; 
-    color: #1b1b1b; 
+    background-color: #00ff00;
+    color: #1b1b1b;
     border: none;
-    padding: 15px 30px; 
-    font-size: 18px; 
+    padding: 15px 30px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -148,14 +147,16 @@ header h1 {
     transform: translateY(1px);
 }
 
-/* Result section */
+/* Result section (make it scrollable) */
 #result {
-    margin-top: 40px; 
-    padding: 30px; 
-    background-color: #222; 
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #222;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     animation: fadeIn 0.5s ease;
-    font-size: 18px; 
+    font-size: 18px;
+    max-height: 500px; /* Adjust this value based on your layout */
+    overflow-y: auto; /* Enables vertical scrolling */
 }
 
 /* Fade-in effect for result display */
@@ -169,14 +170,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-    font-size: 18px; 
+    font-size: 18px;
 }
 
-/*th- table heading, td- table data cells */
+/* th - table heading, td - table data cells */
 th, td {
     padding: 18px; /* Larger padding in table cells */
     text-align: left;
-    border: 1px solid #333; 
+    border: 1px solid #333;
 }
 
 th {
@@ -202,10 +203,10 @@ tr:hover td {
 
 /* Footer styling */
 footer {
-    background-color: #000; 
-    color: #00ff00; 
+    background-color: #000;
+    color: #00ff00;
     text-align: center;
-    padding: 30px 0; 
+    padding: 30px 0;
     margin-top: 50px; /* More space before the footer */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8); /* More intense shadow for the footer */
 }
@@ -222,58 +223,58 @@ footer a {
 
 footer a:hover {
     color: #ff4500;
-    text-shadow: 0 0 20px #ff4500; 
-    border-bottom: 2px solid #ff4500; 
+    text-shadow: 0 0 20px #ff4500;
+    border-bottom: 2px solid #ff4500;
 }
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
     #logo {
-        left: 10%; 
-        width: 130px; 
+        left: 10%;
+        width: 130px;
     }
 
     header h1 {
-        font-size: 40px; 
-        margin-left: 140px; 
+        font-size: 40px;
+        margin-left: 140px;
     }
 
     /* Controls adjustments */
     #controls label {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     #controls input {
-        width: 280px; 
-        font-size: 16px; 
+        width: 280px;
+        font-size: 16px;
     }
 
     #controls button {
-        padding: 12px 25px; 
-        font-size: 18px; 
+        padding: 12px 25px;
+        font-size: 18px;
     }
 
     table {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     th, td {
-        padding: 15px; 
+        padding: 15px;
     }
 
     footer a {
-        font-size: 20px; 
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
     #logo {
-        left: 5%; 
-        width: 100px; 
+        left: 5%;
+        width: 100px;
     }
 
     header h1 {
-        font-size: 28px; 
+        font-size: 28px;
         margin-left: 120px;
     }
 
@@ -295,4 +296,3 @@ footer a:hover {
         font-size: 18px; /* Smaller font for footer */
     }
 }
-
