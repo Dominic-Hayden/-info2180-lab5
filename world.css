@@ -1,1 +1,298 @@
 /* Add your own styles */
+
+/*Author: Dominic Hayden*/
+/*GIT: https://github.com/Dominic-Hayden/-info2180-lab5.git /*
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1b1b1b; 
+    color: #fff; 
+    line-height: 1.6;
+    position: relative; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Create the background GIF with reduced opacity */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/background.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: opacity(0.3); /* Apply opacity to only the background */
+    z-index: -1; /* Behind the content */
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* Apply body shake for screen vibration effect */
+@keyframes screenShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+/* Apply shake effect to alert */
+.alert-shake {
+    animation: shake 0.5s ease-in-out 1; 
+}
+
+/* Apply body shake for screen vibration effect */
+.shake-body {
+    animation: screenShake 0.5s ease-in-out 1;
+    position: relative; /* To prevent layout shift */
+    overflow: hidden; /* Prevent overflow during shake */
+}
+
+/* Header styling */
+header {
+    background-color: #000; 
+    color: #00ff00; 
+    padding: 30px 0; /* Increase padding for a larger header */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px; /* Add extra space below */
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 20px; 
+    left: 17%; 
+    width: 180px; 
+    height: auto;
+    transform: translateX(-10%); /* Fine-tune position to align with the 'W' */
+}
+
+header h1 {
+    font-size: 48px; 
+    letter-spacing: 3px; 
+    margin-left: 180px; 
+    text-shadow: 0 0 15px #00ff00; /* Glowing effect */
+}
+
+/* Controls section */
+#controls {
+    text-align: center;
+    margin: 30px 0; 
+}
+
+#controls label {
+    font-size: 22px; 
+    margin-right: 15px; 
+    color: #ddd; 
+}
+
+#controls input {
+    padding: 15px 20px;
+    margin: 15px 10px; 
+    border: 2px solid #00ff00; 
+    border-radius: 5px;
+    width: 300px; /* Wider input box */
+    transition: border-color 0.3s ease;
+    background-color: #333; 
+    color: #fff;
+    font-size: 18px;
+}
+
+#controls input:focus {
+    border-color: #ff4500; /* Highlight color on focus */
+    outline: none;
+}
+
+#controls button {
+    background-color: #00ff00; 
+    color: #1b1b1b; 
+    border: none;
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+    margin-left: 15px;
+}
+
+#controls button:hover {
+    background-color: #ff4500; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8); /* Glowing shadow effect */
+}
+
+#controls button:active {
+    background-color: #ff6347; /* Red when clicked */
+    transform: translateY(1px);
+}
+
+/* Result section */
+#result {
+    margin-top: 40px; 
+    padding: 30px; 
+    background-color: #222; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.5s ease;
+    font-size: 18px; 
+}
+
+/* Fade-in effect for result display */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 18px; 
+}
+
+/*th- table heading, td- table data cells */
+th, td {
+    padding: 18px; /* Larger padding in table cells */
+    text-align: left;
+    border: 1px solid #333; 
+}
+
+th {
+    background-color: #00ff00; /* Neon green for headers */
+    color: black;
+    text-shadow: 0 0 10px #00ff00; /* Glowing effect on header text */
+}
+
+td {
+    background-color: #333; /* Dark background for table rows */
+    color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #444; /* Slightly lighter background for even rows */
+}
+
+tr:hover td {
+    background-color: #555; /* Hover effect on rows */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000; 
+    color: #00ff00; 
+    text-align: center;
+    padding: 30px 0; 
+    margin-top: 50px; /* More space before the footer */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.8); /* More intense shadow for the footer */
+}
+
+footer a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 22px; /* Larger font size for footer links */
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff00;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    padding: 10px 15px;
+}
+
+footer a:hover {
+    color: #ff4500;
+    text-shadow: 0 0 20px #ff4500; 
+    border-bottom: 2px solid #ff4500; 
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #logo {
+        left: 10%; 
+        width: 130px; 
+    }
+
+    header h1 {
+        font-size: 40px; 
+        margin-left: 140px; 
+    }
+
+    /* Controls adjustments */
+    #controls label {
+        font-size: 20px; 
+    }
+
+    #controls input {
+        width: 280px; 
+        font-size: 16px; 
+    }
+
+    #controls button {
+        padding: 12px 25px; 
+        font-size: 18px; 
+    }
+
+    table {
+        font-size: 16px; 
+    }
+
+    th, td {
+        padding: 15px; 
+    }
+
+    footer a {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        left: 5%; 
+        width: 100px; 
+    }
+
+    header h1 {
+        font-size: 28px; 
+        margin-left: 120px;
+    }
+
+    #controls input {
+        width: 250px; /* Adjust for smaller screens */
+        font-size: 14px;
+    }
+
+    #controls button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    table {
+        font-size: 14px; /* Smaller font for mobile */
+    }
+
+    footer a {
+        font-size: 18px; /* Smaller font for footer */
+    }
+}
+
